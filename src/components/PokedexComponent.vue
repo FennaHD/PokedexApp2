@@ -2,9 +2,17 @@
   <div class="wrapper">
     <div class="container">
       <div class="pokemons">
-        <div v-for="pokemon in pokemons" :key="pokemon.id" class="indiv-pokemon" @click="addToFavorites(pokemon)">
+        <div v-for="(pokemon, id) in pokemons" :key="id" class="indiv-pokemon">
           <img :src="pokemon.little_image">
           <p>#{{pokemon.id}}<br>{{pokemon.name}}</p>
+          <div @click="addToFavorites(pokemon)">
+            <div v-if="favorites.includes(pokemon)">
+              <button type="button" class="btn btn-danger">Remove</button>
+            </div>
+            <div v-else>
+              <button type="button" class="btn btn-success">+ Favorite</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -26,7 +34,7 @@ export default {
     addToFavorites(pokemon) {
       if (this.favorites.includes(pokemon)) {
         console.log("removed " + pokemon.name);
-        this.favorites.splice(this.favorites.indexOf(pokemon));
+        this.favorites.splice(this.favorites.indexOf(pokemon), 1);
         console.log("Favorite count: " + this.favorites.length)
       } else {
         console.log("added " + pokemon.name);
@@ -38,6 +46,7 @@ export default {
 </script>
 
 <style scoped>
+
   .container {
     display: flex;
     width: 100%;
@@ -46,7 +55,6 @@ export default {
 
   .pokemons {
     display: flex;
-    width: 80%;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -76,5 +84,26 @@ export default {
     width: 120px;
   }
 
+  button {
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
 
+  @media only screen and (max-width: 991px) {
+    .container {
+      width: 75%;
+    }
+  }
+
+  @media only screen and (max-width: 870px) {
+    .container {
+      width: 95%;
+    }
+  }
+
+  @media only screen and (max-width: 790px) {
+    .container {
+      width: 95%;
+    }
+  }
 </style>

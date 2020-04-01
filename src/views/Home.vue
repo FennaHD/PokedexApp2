@@ -65,4 +65,22 @@ export default {
   text-align: center;
   font-weight: 900;
 }
+
+@media only screen and (max-width: 991px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .container {
+    width: 95%;
+  }
+}
 </style>

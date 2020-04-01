@@ -12,17 +12,17 @@
         <div class="stats-container">
           <div class="row">
             <div class="stat-box">
-              <span class="stat-name">Height: </span><span id="height">{{pokemon.feet}}' {{pokemon.inches}}"</span>
+              <span class="stat-name">Height:</span><span id="height">{{pokemon.feet}}' {{pokemon.inches}}"</span>
             </div>
           </div>
           <div class="row">
             <div class="stat-box">
-              <span class="stat-name">Weight: </span><span id="weight">{{pokemon.weight}} lbs</span>
+              <span class="stat-name">Weight:</span><span id="weight">{{pokemon.weight}} lbs</span>
             </div>
           </div>
           <div class="row type">
             <div class="stat-box">
-              <span class="stat-name">Type: </span><span id="types">{{pokemon.types.join(", ")}}</span>
+              <span class="stat-name">Type:</span><span class="types" id="types">{{pokemon.types.join(", ")}}</span>
             </div>
           </div>
           <br>
@@ -257,6 +257,8 @@ hr {
 }
 
 .stat-box {
+  display: flex;
+  justify-content: flex-start;
   margin: auto 15px auto 15px;
 }
 
@@ -266,6 +268,7 @@ strong {
 
 .stat-name {
   color: white;
+  margin-right: 8px;
 }
 
 .type {
@@ -292,6 +295,10 @@ strong {
 .welcome {
   font-size: 20px;
   text-align: center;
+}
+
+.types {
+  text-align: left !important;
 }
 
 </style>

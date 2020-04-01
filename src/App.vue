@@ -34,7 +34,7 @@
                   <i class="fab fa-instagram fa-lg black-text mr-md-5 mr-sm-5 mr-4 fa-2x"> </i>
                 </a>
                 <!-- Github -->
-                <a class="gb-ic" href="https://github.com/FennaHD/PokedexApp" target="_blank">
+                <a class="gb-ic" href="https://github.com/FennaHD/PokedexApp2" target="_blank">
                   <i class="fab fa-github fa-lg black-text mr-md-5 mr-sm-5 mr-4 fa-2x"></i>
                 </a>
               </div>
@@ -75,5 +75,35 @@
 
 .page-footer a {
   color: #343a40;
+}
+
+@media only screen and (max-width: 980px) {
+  .navbar {
+    padding: 8px 200px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .navbar {
+    padding: 8px 120px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar {
+    padding: 8px 80px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar {
+    padding: 8px 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar a {
+    font-size: 17px;
+  }
 }
 </style>
